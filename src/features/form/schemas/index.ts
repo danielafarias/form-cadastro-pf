@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { validateCPF } from '@/utils/cpf'
 
 const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/
 const phoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/
@@ -19,24 +20,6 @@ function validateDate(value: string): boolean {
   )
 }
 
-function validateCpf(cpf: string): boolean {
-  const digits = cpf.replace(/\D/g, '')
-  if (digits.length !== 11) return false
-  if (/^(\d)\1+$/.test(digits)) return false
-
-  let sum = 0
-  for (let i = 0; i < 9; i++) sum += parseInt(digits[i]) * (10 - i)
-  let remainder = (sum * 10) % 11
-  if (remainder === 10 || remainder === 11) remainder = 0
-  if (remainder !== parseInt(digits[9])) return false
-
-  sum = 0
-  for (let i = 0; i < 10; i++) sum += parseInt(digits[i]) * (11 - i)
-  remainder = (sum * 10) % 11
-  if (remainder === 10 || remainder === 11) remainder = 0
-  return remainder === parseInt(digits[10])
-}
-
 export const step1Schema = z.object({
   nomeCompleto: z
     .string()
@@ -50,7 +33,7 @@ export const step1Schema = z.object({
   cpf: z
     .string()
     .regex(cpfRegex, 'Formato de CPF inválido (000.000.000-00)')
-    .refine(validateCpf, 'CPF inválido'),
+    .refine(validateCPF, 'CPF inválido'),
   telefone: z
     .string()
     .regex(phoneRegex, 'Formato de telefone inválido ((00) 00000-0000)'),

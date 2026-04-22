@@ -58,6 +58,11 @@ describe('step1Schema', () => {
     expect(result.success).toBe(false)
   })
 
+  it('rejeita CPF conhecido como inválido', () => {
+    const result = step1Schema.safeParse({ ...validData, cpf: '123.456.789-09' })
+    expect(result.success).toBe(false)
+  })
+
   it('rejeita telefone com formato inválido', () => {
     const result = step1Schema.safeParse({ ...validData, telefone: '11987654321' })
     expect(result.success).toBe(false)
