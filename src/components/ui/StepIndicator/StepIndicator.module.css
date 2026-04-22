@@ -1,0 +1,53 @@
+.wrapper {
+  padding: var(--mantine-spacing-md) 0;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.stepIcon {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stepIcon.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15);
+}
+
+.stepIcon.completed {
+  box-shadow: none;
+}
+
+.stepLabel {
+  white-space: nowrap;
+  font-size: 11px;
+
+  @media (min-width: 48em) {
+    font-size: var(--mantine-font-size-xs);
+  }
+}
+
+.connector {
+  width: 28px;
+  height: 2px;
+  background: var(--mantine-color-gray-3);
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+
+  @media (min-width: 30em) {
+    width: 44px;
+  }
+
+  @media (min-width: 48em) {
+    width: 80px;
+  }
+}
+
+.connectorCompleted {
+  background: linear-gradient(90deg, var(--mantine-color-violet-5), var(--mantine-color-blue-5));
+}

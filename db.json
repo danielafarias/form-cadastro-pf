@@ -1,0 +1,65 @@
+{
+  "ceps": [
+    {
+      "id": "01001000",
+      "logradouro": "Praça da Sé",
+      "bairro": "Sé",
+      "cidade": "São Paulo",
+      "estado": "SP"
+    },
+    {
+      "id": "01310100",
+      "logradouro": "Avenida Paulista",
+      "bairro": "Bela Vista",
+      "cidade": "São Paulo",
+      "estado": "SP"
+    },
+    {
+      "id": "20040020",
+      "logradouro": "Rua da Assembleia",
+      "bairro": "Centro",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
+    },
+    {
+      "id": "30112000",
+      "logradouro": "Praça Sete de Setembro",
+      "bairro": "Centro",
+      "cidade": "Belo Horizonte",
+      "estado": "MG"
+    },
+    {
+      "id": "40010000",
+      "logradouro": "Praça da Sé",
+      "bairro": "Sé",
+      "cidade": "Salvador",
+      "estado": "BA"
+    },
+    {
+      "id": "80010000",
+      "logradouro": "Rua XV de Novembro",
+      "bairro": "Centro",
+      "cidade": "Curitiba",
+      "estado": "PR"
+    },
+    {
+      "id": "90010000",
+      "logradouro": "Rua dos Andradas",
+      "bairro": "Centro Histórico",
+      "cidade": "Porto Alegre",
+      "estado": "RS"
+    }
+  ],
+  "profissoes": [
+    { "id": 1, "nome": "Engenheiro(a) de Software" },
+    { "id": 2, "nome": "Médico(a)" },
+    { "id": 3, "nome": "Advogado(a)" },
+    { "id": 4, "nome": "Professor(a)" },
+    { "id": 5, "nome": "Contador(a)" },
+    { "id": 6, "nome": "Arquiteto(a)" },
+    { "id": 7, "nome": "Administrador(a) de Empresas" },
+    { "id": 8, "nome": "Analista de Dados" },
+    { "id": 9, "nome": "Designer Gráfico(a)" },
+    { "id": 10, "nome": "Enfermeiro(a)" }
+  ]
+}

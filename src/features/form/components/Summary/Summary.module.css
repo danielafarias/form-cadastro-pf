@@ -1,0 +1,4 @@
+.sectionCard {
+  border-color: var(--mantine-color-violet-1);
+  border-left: 3px solid var(--mantine-color-violet-5);
+}

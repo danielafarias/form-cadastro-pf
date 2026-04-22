@@ -1,0 +1,16 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 30%, #e0e7ff 70%, #dbeafe 100%);
+}
+
+.indicatorCard {
+  border-color: var(--mantine-color-violet-2);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.formCard {
+  border-color: var(--mantine-color-violet-2);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}

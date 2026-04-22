@@ -1,0 +1,1 @@
+export { HighlightBadge } from './HighlightBadge'
